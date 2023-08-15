@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-emerald-500">
+    <section class=" text-white p-5">
+        <h1 class="text-center text-3xl font-extrabold mb-10">Let's get some <span class="text-amber-600">moooooooney</span></h1>
+        <div class="grid grid-cols-3 gap-7 px-20">
+            <div class="bg-green-900  p-5 rounded-md">
+                <h2 class="text-lg ml-3 font-bold">Deposit</h2>
+                <p class="font-semibold ml-3">$<span id="previousDeposit">00</span></p>
+            </div>
+
+            <div class="bg-pink-900  p-5 rounded-md">
+                <h2 class="text-lg ml-3 font-bold">Withdraw</h2>
+                <p class="font-semibold ml-3">$<span id="previousWithdraw">00</span></p>
+            </div>
+
+            <div class="bg-violet-900  p-5 rounded-md">
+                <h2 class="text-lg ml-3 font-bold">Balance</h2>
+                <p class="font-semibold ml-3">$<span id="previousBalance">1265</span></p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="py-7 grid grid-cols-2 gap-5">
+        <div class="bg-violet-800 py-5 px-8 ml-24 rounded-md">
+            <h1 class="text-2xl mb-4 text-white font-extrabold">Please <span class="text-orange-600">Deposit</span></h1>
+            <div class=" px-14">
+                <input id="depositInput" class="block mb-4 rounded-s h-8 w-full" type="email" placeholder="Enter Your Deposit amount">
+                <button id="depositButton"
+                    class="text-white py-2 px-9 rounded-md bg-blue-900 hover:bg-amber-950 text-sm ">Deposit</button>
+            </div>
+        </div>
+
+        <div class="bg-fuchsia-800 mr-24 px-8 py-5 rounded-md">
+            <h1 class="text-2xl mb-4 text-white font-extrabold">Please <span class="text-orange-600">Withdraw</span></h1>
+            <div class=" px-14">
+                <input id="withdrawInput" class="block mb-4 rounded-s h-8 w-full" type="email"
+                    placeholder="Enter Your Withdraw amount">
+                <button id="withdrawButton"
+                    class="text-white py-2 px-9 rounded-md bg-blue-900 hover:bg-amber-950 text-sm ">Withdraw</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
+</body>
+</html>
