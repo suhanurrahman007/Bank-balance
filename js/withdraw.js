@@ -1,32 +1,43 @@
-document.getElementById('withdrawButton').addEventListener('click', function getWithdraw() {
-    const withdrawInput = document.getElementById('withdrawInput')
-    const withdrawInputStringValue = withdrawInput.value;
-    const newwithdrawValue = parseFloat(withdrawInputStringValue)
+document.getElementById('withdrawButton').addEventListener('click', function () {
+    // const withdrawInput = document.getElementById('withdrawInput')
+    // const withdrawInputStringValue = withdrawInput.value;
+    // const newwithdrawValue = parseFloat(withdrawInputStringValue)
+    const newWithdrawAmount = getInputFliedValueId("withdrawInput")
 
-    const previousWithdraw = document.getElementById('previousWithdraw')
-    const previousWithdrawStaingValue = previousWithdraw.innerText;
-    const previousWithdrawValue = parseFloat(previousWithdrawStaingValue)
-    
-
-    const previousBalances = document.getElementById('previousBalance')
-    const previousStringBalances = previousBalances.innerText;
-    const previousBalancesValue = parseFloat(previousStringBalances);
-
-    withdrawInput.value = "";
+    // const previousWithdraw = document.getElementById('previousWithdraw')
+    // const previousWithdrawStaingValue = previousWithdraw.innerText;
+    // const previousWithdrawValue = parseFloat(previousWithdrawStaingValue)
+    const previousWithdrawAmount = getElementValueId("previousWithdraw")
 
 
-    if (newwithdrawValue > previousBalancesValue) {
+
+    // const previousBalances = document.getElementById('previousBalance')
+    // const previousStringBalances = previousBalances.innerText;
+    // const previousBalancesValue = parseFloat(previousStringBalances);
+    const previousBalance = getElementValueId("previousBalance")
+
+    // withdrawInput.value = "";
+
+
+    if (newWithdrawAmount > previousBalance) {
         alert("Balance nai.....jaaaa bag beta gorib")
         return;
     } 
 
-    const currentWithdraw = previousWithdrawValue + newwithdrawValue;
-    previousWithdraw.innerText = currentWithdraw;
+    const currentWithdrawTotal = previousWithdrawAmount + newWithdrawAmount;
 
 
-     const currentBalances = previousBalancesValue - newwithdrawValue;
-     previousBalances.innerText = currentBalances;
-   
+    // previousWithdraw.innerText = currentWithdraw;
+    setElementValue("previousWithdraw", currentWithdrawTotal)
+
+
+    const currentBalances = previousBalance - newWithdrawAmount;
+
+
+    //  previousBalances.innerText = currentBalances;
+    setElementValue("previousBalance", currentBalances)
+
+
 
 
 })
